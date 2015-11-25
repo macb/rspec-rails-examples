@@ -2,17 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.3'
 
-gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'jquery-rails'
 gem 'nokogiri'
 gem 'sass-rails', '~> 4.0'
-gem 'sqlite3'
+gem 'mysql2', '~> 0.3.13'
 gem 'turbolinks'
-gem 'uglifier', '>= 1.3.0'
 gem 'symmetric-encryption', '~> 3.8.1'
-
-gem 'quiet_assets', group: :development
 
 group :development, :test do
   gem 'byebug' # Call 'byebug' in code to stop execution and get a debugger console

@@ -1,0 +1,15 @@
+build:
+  image: ruby:2.1.4
+  commands:
+    - bundle install --path=bundler -j 4 --without development production
+    - bundle exec rake db:create db:migrate
+    - bundle exec rspec
+cache:
+  mount:
+    - bundler
+compose:
+  database:
+    image: mysql:5.5
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD="yes"
+
